@@ -8,8 +8,8 @@ import java.lang.Integer;
 public class derLeserCaster {
 	Scanner[] scanner = new Scanner[4];
 	
-	int 		nColums = 0;
-	int 		nRows = 0;
+	int nColums = 0;
+	int nRows = 0;
 	int [][] scanHeights;
 
 	public int Colums() { return nColums;}
@@ -71,5 +71,3 @@ public class derLeserCaster {
 		return;
 	}	
 }
-
-	

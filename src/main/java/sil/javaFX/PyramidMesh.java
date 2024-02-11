@@ -13,8 +13,10 @@ import javafx.scene.shape.TriangleMesh;
 import javafx.stage.Stage;
 
 public class PyramidMesh {
+
 	public TriangleMesh pyramidMesh = new TriangleMesh();
 	public Group root = new Group();
+
 	PerspectiveCamera cam = new PerspectiveCamera();
 	PointLight PL = new PointLight(); 
 	PhongMaterial mat = new PhongMaterial();
@@ -24,9 +26,10 @@ public class PyramidMesh {
 	Point3D p3 = new Point3D(0, 0, 1);
 	
 	public void init () throws Exception {
-		MeshView pyramid = new MeshView(pyramidMesh);
-		
+
+		MeshView pyramid = new MeshView(pyramidMesh);		
 		PhongMaterial mat = new PhongMaterial(Color.RED);
+		
 		pyramid.setDrawMode(DrawMode.FILL);
 		pyramid.setTranslateX(0);
 		pyramid.setTranslateY(0);

@@ -41,15 +41,13 @@ public class TerrainMeshNiesen
 	int nRows = 0;
 	int[][]mapHeights;
 	
-	public TerrainMeshNiesen (int cols, int rows, int[][] heights)
-	{
+	public TerrainMeshNiesen (int cols, int rows, int[][] heights) {
 		nColums = cols;
 		nRows = rows;
 		mapHeights = heights;
 	}
 	
-	public void init () throws Exception 
-	{		
+	public void init () throws Exception {		
 		root.getChildren().add(MyMesh1);
 
 		//Y-Achse
@@ -87,24 +85,20 @@ public class TerrainMeshNiesen
 		cam.setTranslateZ(-18000);
 		cam.setRotationAxis(p1);
 		cam.setRotate(-20);	
-		}
+	}
 	
-	public void MyMesh1(Stage Bildschirm) throws Exception
-	{
+	public void MyMesh1(Stage Bildschirm) throws Exception {
 		int nPoints1 = (((nColums*2+1)-200)*((nRows*2+1)-200));
 		int yPoints1P1 [] = new int [nPoints1];
 		int yPoints1P2 [] = new int [nPoints1];
 		int yPoints1P3 [] = new int [nPoints1];
 		int yPoints1P4 [] = new int [nPoints1];
 		
-		//1. Loop f�r jede Zeile
-		for(int z11 = 0; z11 <= (nRows*2+1)-200; z11++)
-		{
-			//2. Loop f�r jede Spalte (Punkt auf Zeile)
-			for(int x11 = 0; x11 <= (nColums*2+1)-200; x11++)
-			{
-				if((x11 % 100 == 0)&&(z11 % 100 == 0))
-				{
+		//1. Loop für jede Zeile
+		for(int z11 = 0; z11 <= (nRows*2+1)-200; z11++) {
+			//2. Loop für jede Spalte (Punkt auf Zeile)
+			for(int x11 = 0; x11 <= (nColums*2+1)-200; x11++) {
+				if((x11 % 100 == 0)&&(z11 % 100 == 0)) {
 					a1 += 4;
 					a2 += 4;
 					a3 += 4;
@@ -119,16 +113,16 @@ public class TerrainMeshNiesen
 					
 					Mesh11.getTexCoords().addAll(0,0);
 					
-					if ((yPoints1P1[x11]) <= 0){
+					if ((yPoints1P1[x11]) <= 0) {
 						yPoints1P1[x11] = (mapHeights[x11-200][z11-200]);
 					}
-					if ((yPoints1P2[x11]) <= 0){
+					if ((yPoints1P2[x11]) <= 0) {
 						yPoints1P2[x11] = (mapHeights[x11-100][z11-200]);
 					}
-					if ((yPoints1P3[x11]) <= 0){
+					if ((yPoints1P3[x11]) <= 0) {
 						yPoints1P3[x11] = (mapHeights[x11-200][z11-100]);
 					}
-					if ((yPoints1P4[x11]) <= 0){
+					if ((yPoints1P4[x11]) <= 0) {
 						yPoints1P4[x11] = (mapHeights[x11-100][z11-100]);
 					}
 					//Alle Punkte eines Quadrats
@@ -139,7 +133,7 @@ public class TerrainMeshNiesen
 							((x11) + 100),  	(-yPoints1P4[x11])*2, 	((z11) + 100)   //Unterer rechter Punkt P4
 							);
 					
-					//Fl�che der beiden Dreiecke in einem Quadrat
+					//Fläche der beiden Dreiecke in einem Quadrat
 					Mesh11.getFaces().addAll(
 							a1,0, a2,0, a3,0,
 							b1,0, b2,0, b3,0,
@@ -155,8 +149,7 @@ public class TerrainMeshNiesen
 		}
 	}
 	
-	public void show (Stage Bildschirm) throws Exception
-	{
+	public void show (Stage Bildschirm) throws Exception {
 		Scene scene = new Scene(root, 1200, 800, Color.LIGHTBLUE);
 		scene.setCamera(cam);
 		

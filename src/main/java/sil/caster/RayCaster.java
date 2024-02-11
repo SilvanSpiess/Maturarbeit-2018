@@ -4,13 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
-import java.util.ArrayList;
 
-import javax.swing.JComponent;
-
-public class RayCaster extends JComponent{
-	
-	private static final long serialVersionUID = 1L;
+public class RayCaster {
 	
 	public double posx;		//x Pos. des Vektors
 	public double posz;		//z Pos. des Vektors

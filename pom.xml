@@ -6,82 +6,68 @@
 
   <!-- java -cp Niesen-2.1.jar sil.Hauptprogramm -->
   <groupId>sil.Hauptprogramm</groupId>
-  <artifactId>Niesen</artifactId>
-  <version>2.1</version>
+  <artifactId>Maturarbeit_Niesen</artifactId>
+  <version>2.1.0</version>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-    <javafx.dir>/usr/share/openjfx/lib</javafx.dir>
-  </properties>
-
-  <dependencies>
+  <dependencies>  
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>javafx</groupId>
+        <groupId>org.openjfx</groupId>
         <artifactId>javafx-base</artifactId>
-        <version>1.0</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\silsp\Downloads\setups\javafx-sdk-20.0.1\lib\javafx.base.jar</systemPath>
+        <version>20.0.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-swing -->
     <dependency>
-        <groupId>javafx</groupId>
-        <artifactId>javafx-controls</artifactId>
-        <version>1.0</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\silsp\Downloads\setups\javafx-sdk-20.0.1\lib\javafx.controls.jar</systemPath>
-    </dependency>
-    <dependency>
-        <groupId>javafx</groupId>
-        <artifactId>javafx-fxml</artifactId>
-        <version>1.0</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\silsp\Downloads\setups\javafx-sdk-20.0.1\lib\javafx.fxml.jar</systemPath>
-    </dependency>
-    <dependency>
-        <groupId>javafx</groupId>
-        <artifactId>javafx-graphics</artifactId>
-        <version>1.0</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\silsp\Downloads\setups\javafx-sdk-20.0.1\lib\javafx.graphics.jar</systemPath>
-    </dependency>
-    <dependency>
-        <groupId>javafx</groupId>
-        <artifactId>javafx-media</artifactId>
-        <version>1.0</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\silsp\Downloads\setups\javafx-sdk-20.0.1\lib\javafx.media.jar</systemPath>
-    </dependency>
-    <dependency>
-        <groupId>javafx</groupId>
+        <groupId>org.openjfx</groupId>
         <artifactId>javafx-swing</artifactId>
-        <version>1.0</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\silsp\Downloads\setups\javafx-sdk-20.0.1\lib\javafx.swing.jar</systemPath>
+        <version>20.0.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
     <dependency>
-        <groupId>javafx</groupId>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-media</artifactId>
+        <version>20.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+    <dependency>
+        <groupId>org.openjfx</groupId>
         <artifactId>javafx-web</artifactId>
-        <version>1.0</version>
-        <scope>system</scope>
-        <systemPath>C:\Users\silsp\Downloads\setups\javafx-sdk-20.0.1\lib\javafx.web.jar</systemPath>
+        <version>20.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-graphics</artifactId>
+        <version>20.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-fxml</artifactId>
+        <version>20.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-controls</artifactId>
+        <version>20.0.1</version>
     </dependency>
   </dependencies>
 
-  <build>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <javafx.version>21</javafx.version>
+    <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
+  </properties>
+
+   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version>
         <configuration>
-            <release>17</release>
+            <mainClass>sil.Hauptprogramm</mainClass>
         </configuration>
       </plugin>
     </plugins>

@@ -1,11 +1,8 @@
 package sil.caster;
 
 import java.io.File;
-import java.io.InputStream;
-import java.util.Scanner;
 
-public class MyMap 
-{
+public class MyMap {
 	int x;
 	int y;	
 	int a;
@@ -95,5 +92,3 @@ public class MyMap
 		}
 	}
 }
-
-
